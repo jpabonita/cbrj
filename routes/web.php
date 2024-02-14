@@ -26,7 +26,7 @@ Route::get('/about-us',[HomepageController::class, 'aboutus'])->name('homepage.a
 Route::get('/products',[HomepageController::class, 'products'])->name('homepage.products');
 Route::get('/contact-us',[HomepageController::class, 'contactus'])->name('homepage.contactus');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/app/admin', [AdminDashboard::class, 'index'])->name('app.admin.index');
 
